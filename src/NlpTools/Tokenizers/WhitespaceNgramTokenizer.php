@@ -10,7 +10,7 @@ namespace NlpTools\Tokenizers;
 class WhitespacePhraseTokenizer implements TokenizerInterface
 {
 
-    private $n; // phrase word length
+    private $n=1; // phrase word length
     
     const PATTERN = '/[\pZ\pC]+/u';
 
