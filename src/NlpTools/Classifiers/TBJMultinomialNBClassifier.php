@@ -9,7 +9,7 @@ use NlpTools\Models\MultinomialNBModelInterface;
 /**
  * Use a multinomia NB model to classify a document
  */
-class MultinomialNBClassifier implements ClassifierInterface
+class TBJMultinomialNBClassifier implements ClassifierInterface
 {
     // The feature factory
     protected $feature_factory;
