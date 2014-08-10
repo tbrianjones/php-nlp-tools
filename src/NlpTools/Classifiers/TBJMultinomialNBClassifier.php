@@ -51,7 +51,6 @@ class TBJMultinomialNBClassifier implements ClassifierInterface
         $result['class'] = $maxclass;
         $result['differential'] = $differential;
         return $result;
-        return $maxclass;
     }
 
     /**
