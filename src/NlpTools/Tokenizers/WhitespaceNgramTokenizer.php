@@ -7,7 +7,7 @@ namespace NlpTools\Tokenizers;
  * Break on every white space
  * Create ngrams with the specified number of words ( $n )
  */
-class WhitespacePhraseTokenizer implements TokenizerInterface
+class WhitespaceNgramTokenizer implements TokenizerInterface
 {
 
     private $n=1; // phrase word length
