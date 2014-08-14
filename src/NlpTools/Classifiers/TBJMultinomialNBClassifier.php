@@ -35,11 +35,11 @@ class TBJMultinomialNBClassifier implements ClassifierInterface
     {
         $maxclass = current($classes);
         $maxscore = $this->getScore($maxclass,$d);
-        echo "\n ** $maxclass: $maxscore";
+        echo "\n  * $maxclass: $maxscore";
         $firm_score = $maxscore;
         while ($class=next($classes)) {
             $score = $this->getScore($class,$d);
-            echo "\n ** $class: $score";
+            echo "\n  * $class: $score";
             $not_firm_score = $score;
             if ($score>$maxscore) {
                 $maxclass = $class;
@@ -47,7 +47,7 @@ class TBJMultinomialNBClassifier implements ClassifierInterface
             }
         }
         $differential = ((1-( min(abs($firm_score),abs($not_firm_score)) / max(abs($firm_score),abs($not_firm_score))))*100);
-        echo "\n ** Differential: ".$differential.'%';
+        echo "\n  * Differential: ".$differential.'%';
         $result['class'] = $maxclass;
         $result['differential'] = $differential;
         return $result;
