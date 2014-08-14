@@ -46,8 +46,8 @@ class TBJMultinomialNBClassifier implements ClassifierInterface
                 $maxscore = $score;
             }
         }
-        $differential = ((1-( min(abs($firm_score),abs($not_firm_score)) / max(abs($firm_score),abs($not_firm_score))))*100).'%';
-        echo "\n ** Differential: ".$differential;
+        $differential = ((1-( min(abs($firm_score),abs($not_firm_score)) / max(abs($firm_score),abs($not_firm_score))))*100);
+        echo "\n ** Differential: ".$differential.'%';
         $result['class'] = $maxclass;
         $result['differential'] = $differential;
         return $result;
